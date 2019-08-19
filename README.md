@@ -1,6 +1,6 @@
 # Fractal Generator (in c++)
 
-![Faded Dragon Curve](color_fade.bmp)
+![Faded Dragon Curve](color_fade.jpg)
 
 This repository has a bunch of classes to generate fractals and save the designs to .bmp images.
 
