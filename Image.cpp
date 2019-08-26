@@ -120,6 +120,10 @@ void Image::setPixel(int x, int y, Color c) {
 }
 
 void Image::setBackground(int c) {
+    setBackground({c, c, c});
+}
+
+void Image::setBackground(Color c) {
     for (int y = 0; y < height; y++) {
         for (int x = 0; x < width; x++) {
             setPixel(x, y, c);
@@ -358,7 +362,7 @@ void Image::erode() {
         }
         // cout << stack.size() << ", " << (width*height) << endl;
         run = (stack.size() != 0);
-        Color c = getColor(depth);
+        Color c = getPrimaryColor(depth);
         while (stack.size()) {
             Point p = stack.back();
             stack.pop_back();

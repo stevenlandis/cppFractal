@@ -15,6 +15,7 @@ struct Image {
     void setPixel(int x, int y, int c);
     void setPixel(int x, int y, Color c);
     void setBackground(int c);
+    void setBackground(Color c);
     void line(int x0, int y0, int x1, int y1);
     void line(Color c, int x0, int y0, int x1, int y1);
 

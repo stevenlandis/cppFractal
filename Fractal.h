@@ -42,6 +42,7 @@ struct Fractal {
     void printPoints();
     void printBoundary();
     Image getImage(int width, int height);
+    Image getImage(int width, int height, Color background, Color getLineColor(double));
     void saveImage(int width, int height);
 };
 

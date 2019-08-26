@@ -242,9 +242,17 @@ void Fractal::printBoundary() {
     of.close();
 }
 
+Color getBlackColor(double d) {
+    return {0, 0, 0};
+}
+
 Image Fractal::getImage(int width, int height) {
+    return getImage(width, height, {255, 255, 255}, getBlackColor);
+}
+
+Image Fractal::getImage(int width, int height, Color background, Color getColor(double)) {
     Image img(width, height);
-    img.setBackground(0);
+    img.setBackground(background);
 
     // get size of fractal
     double wf = max_x - min_x;
@@ -290,11 +298,11 @@ Image Fractal::getImage(int width, int height) {
     return img;
 }
 
-void Fractal::saveImage(int width, int height) {
-    Image img = getImage(width, height);
-    img.erode();
+// void Fractal::saveImage(int width, int height) {
+//     Image img = getImage(width, height);
+//     img.erode();
 
-    img.save("out.bmp");
-    // img.save("pics/" + string + ".bmp");
-}
+//     img.save("out.bmp");
+//     // img.save("pics/" + string + ".bmp");
+// }
 

@@ -8,7 +8,7 @@ int falling(double v) {
     return rising(1-v);
 }
 
-Color getColor(double a) {
+Color getPrimaryColor(double a) {
     a = a - static_cast<double>(static_cast<int>(a));
 
     Color res = {0,0,0};
